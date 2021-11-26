@@ -3,9 +3,10 @@ import datetime     # imports datetime modules
 
 
 class ComputerScienceStudent(Student):      # class named ComputerScienceStudent that inherits Student class
-    def __init__(self, student_email, student_name, gender, date_of_birth, address, phone_number, degree, year,
+    def __init__(self, student_email, student_name, gender, date_of_birth, address, phone_number,year,
                  github_username):        # initialize ComputerScienceStudent properties
-        super().__init__(student_email, student_name, gender, date_of_birth, address, phone_number, degree, year)      # Access init method of student class (parent class)
+        super().__init__(student_email, student_name, gender, date_of_birth, address, phone_number, year)      # Access init method of student class (parent class)
+        self.major = "Computer Science"
         self.github_username = github_username
         self.expected_graduation_date = self.date_of_enrollment + datetime.timedelta(weeks=208)
         # 208 weeks equals to 4 years

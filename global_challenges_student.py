@@ -3,9 +3,9 @@ import datetime
 
 
 class GlobalChallengesStudent(Student):
-    def __init__(self, student_email, student_name, gender, date_of_birth, address, phone_number, degree,
-                 year, mission):
-        super().__init__(student_email, student_name, gender, date_of_birth, address, phone_number, degree, year)
+    def __init__(self, student_email, student_name, gender, date_of_birth, address, phone_number, year, mission):
+        super().__init__(student_email, student_name, gender, date_of_birth, address, phone_number, year)
+        self.major = "Global Challenges"
         self.mission = mission
         self.expected_graduation_date = self.date_of_enrollment + datetime.timedelta(weeks=156)
         # 156 weeks equals to 3 years
