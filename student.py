@@ -34,7 +34,7 @@ class Student:
                f"Date of enrollment: {self.date_of_enrollment}\n"\
                f"Year:{ self.year}\n"\
                f"Status: {self.status}\n"\
-               f"Internships:{ self.internship}\n"
+               f"Internships:{ self.internship}"
 
     def promote_student(self):
         self.year += 1

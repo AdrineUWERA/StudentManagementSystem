@@ -37,5 +37,5 @@ class GlobalChallengesStudent(Student):
 
     def print_student_information(self):
 
-        return super().print_student_information() + f"Mission: {self.mission}\n" \
+        return super().print_student_information() + f"\nMission: {self.mission}\n" \
               f"Expected graduation date: {self.expected_graduation_date}"

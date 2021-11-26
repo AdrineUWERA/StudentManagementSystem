@@ -36,7 +36,7 @@ class ComputerScienceStudent(Student):      # class named ComputerScienceStudent
             return f"Student will graduate on {self.expected_graduation_date}"
 
     def print_student_information(self):
-        return super().print_student_information() + f"Github username: {self.github_username}\n"\
+        return super().print_student_information() + f"\nGithub username: {self.github_username}\n"\
               f"Expected graduation date: {self.expected_graduation_date}"
 
 
