@@ -38,6 +38,8 @@ def main():
               "4. Change student status\n"
               "5. Update student information\n"
               "6. View degree program outline\n"
+              "7. Add student internship\n"
+              "8. Add student venture\n"
               "or other key to exit\n")
         action = input("Enter your choice: ")
         if action == '1':
@@ -57,7 +59,6 @@ def main():
                     date_of_birth=input("Enter student's date of birth (YYYY-MM-DD): "),
                     address=input("Enter student's address: "),
                     phone_number=input("Enter student's phone number: "),
-                    degree=input("Enter student's major: "),    # move to init function!!!!!!!!!
                     year=input("Enter student's year of study: "),
                     github_username=input("Enter student's Github username: "))
 
@@ -69,7 +70,6 @@ def main():
                     date_of_birth=input("Enter student's date of birth (YYYY-MM-DD): "),
                     address=input("Enter student's address: "),
                     phone_number=input("Enter student's phone number: "),
-                    degree=input("Enter student's major: "),
                     year=input("Enter student's year of study: "))
 
             elif student_major == '3':
@@ -80,7 +80,6 @@ def main():
                     date_of_birth=input("Enter student's date of birth: "),
                     address=input("Enter student's address: "),
                     phone_number=input("Enter student's phone number: "),
-                    degree=input("Enter student's major: "),
                     year=input("Enter student's year of study: "),
                     mission=input("Enter student's mission: "))
             elif student_major == '4':
@@ -91,8 +90,7 @@ def main():
                     date_of_birth=input("Enter student's date of birth (YYYY-MM-DD): "),
                     address=input("Enter student's address: "),
                     phone_number=input("Enter student's phone number: "),
-                    degree=input("Enter student's major: "),
-                    year=input("Enter student's year of study: ")) #????????????
+                    year=input("Enter student's year of study: "))
 
         elif action == '2':
             print("\nStudent information")
@@ -100,7 +98,7 @@ def main():
             email = input("Enter student email: ")
             for student in student_records:
                 if student.student_email == email:
-                    student.print_student_information()
+                    print(student.print_student_information())
                     break
             else:
                 print("Couldn't find the student with email provided! Check the email and try again.\n")
@@ -111,7 +109,7 @@ def main():
             email = input("Enter student email: ")
             for student in student_records:
                 if student.student_email == email:
-                    student.promote_student()
+                    print(student.promote_student())
                     break
             else:
                 print("Couldn't find the student with email provided! Check the email and try again.\n")
@@ -122,7 +120,7 @@ def main():
             email = input("Enter student email: ")
             for student in student_records:
                 if student.student_email == email:
-                    student.change_student_status()
+                    print(student.change_student_status())
                     break
             else:
                 print("Couldn't find the student with email provided! Check the email and try again.\n")
@@ -133,7 +131,7 @@ def main():
             email = input("Enter student email: ")
             for student in student_records:
                 if student.student_email == email:
-                    student.update_student_information()
+                    print(student.update_student_information())
                     break
 
             else:
@@ -151,10 +149,39 @@ def main():
             else:
                 print("Couldn't find the student with email provided! Check the email and try again.\n")
 
+        elif action == '7':
+            print("\nAdd student internship")
+            print("---------------------------")
+            email = input("Enter student email: ")
+            for student in student_records:
+                if student.student_email == email:
+                    print(student.add_student_internship())
+                    break
+
+            else:
+                print("Couldn't find the student with email provided! Check the email and try again.\n")
+
+        elif action == '8':
+            print("\nAdd student's venture")
+            print("---------------------------")
+            email = input("Enter student email: ")
+            for student in student_records:
+                if student.student_email == email:
+                    if student.major == "International Business And Trade" or student.major == "Entrepreneurship":
+                        print(student.add_venture_details())
+                        break
+                    else:
+                        print("Student's major must be IBT or ENT to add venture.")
+
+            else:
+                print("Couldn't find the student with email provided! Check the email and try again.\n")
+
     elif user == '2':
         print("\nChoose \n"
               "1. Update information\n"
-              "2. View degree program outline\n")
+              "2. View degree program outline\n"
+              "3. Add internship\n"
+              "4. Add venture")
         action = input("Enter choice: ")
         if action == '1':
             print("\nUpdate student information")
@@ -162,13 +189,13 @@ def main():
             email = input("Enter student email: ")
             for student in student_records:
                 if student.student_email == email:
-                    student.update_student_information()
+                    print(student.update_student_information())
                     break
 
             else:
                 print("Couldn't find the student with email provided! Check the email and try again.\n")
 
-        if action == '2':
+        elif action == '2':
             print("\nView degree program outline")
             print("---------------------------")
             email = input("Enter student email: ")
@@ -177,6 +204,32 @@ def main():
                     student.view_degree_program_outline()
                     break
 
+            else:
+                print("Couldn't find the student with email provided! Check the email and try again.\n")
+
+        elif action == '3':
+            print("\nAdd student internship")
+            print("---------------------------")
+            email = input("Enter student email: ")
+            for student in student_records:
+                if student.student_email == email:
+                    print(student.add_student_internship())
+                    break
+
+            else:
+                print("Couldn't find the student with email provided! Check the email and try again.\n")
+
+        elif action == '4':
+            print("\nAdd venture")
+            print("----------------")
+            email = input("Enter student email: ")
+            for student in student_records:
+                if student.student_email == email:
+                    if student.major == "International Business And Trade" or student.major == "Entrepreneurship":
+                        print(student.add_venture_details())
+                        break
+                    else:
+                        print("You must be an IBT or ENT major to add venture.")
             else:
                 print("Couldn't find the student with email provided! Check the email and try again.\n")
 
