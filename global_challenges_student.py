@@ -18,21 +18,21 @@ class GlobalChallengesStudent(Student):
 
     def promote_student(self):
         if self.year == 3:
-            print("The student is in his/her final year")
+            return "The student is in his/her final year"
 
         else:
             self.year += 1
-            print(f"Student is now in year {self.year}")
+            return f"Student is now in year {self.year}"
 
     def change_student_status(self):
         if datetime.datetime.now() >= self.expected_graduation_date:
             self.student_status = "Alumni"
+            return "Student done is done with the degree program"
 
         else:
-            print(f"Student will graduate on {self.expected_graduation_date}")
+            return f"Student will graduate on {self.expected_graduation_date}"
 
     def print_student_information(self):
-        super().print_student_information()
-        print(f"Mission: {self.mission}\n"
-              f"Expected graduation date: {self.expected_graduation_date}")
 
+        return super().print_student_information() + f"Mission: {self.mission}\n" \
+              f"Expected graduation date: {self.expected_graduation_date}"
