@@ -15,6 +15,8 @@ class EntrepreneurshipStudent(Student):
     def view_degree_program_outline():
         ent_program_outline = open("ent_degree_program_outline", "r")
         print(ent_program_outline.read())
+        ent_program_outline.close()
+        return True
 
     def promote_student(self):
         if self.year == 2:
@@ -30,7 +32,7 @@ class EntrepreneurshipStudent(Student):
             return f"Student will graduate {self.expected_graduation_date}"
 
     def print_student_information(self):
-        return super().print_student_information() + f"\nVenture:{self.venture}\nExpected graduation date:" \
+        return super().print_student_information() + f"Venture:{self.venture}\nExpected graduation date:" \
                                                      f"{self.expected_graduation_date}"
 
     def add_venture_details(self):

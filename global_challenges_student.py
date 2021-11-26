@@ -14,7 +14,7 @@ class GlobalChallengesStudent(Student):
         print("Global challenges student registered successfully!")
 
     @staticmethod
-    def view_degree_program_outline(self):
+    def view_degree_program_outline():
         gc_program_outline = open("GC_degree_program_outline.tx", "r")
         print(gc_program_outline.read())
         gc_program_outline.close()

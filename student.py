@@ -26,15 +26,15 @@ class Student:
         return f"Student information: \n"\
                f"Student email: {self.student_email}\n"\
                f"Student name: {self.student_name}\n"\
-               f"Gender:{self.gender}\n"\
+               f"Gender: {self.gender}\n"\
                f"Date of birth: {self.date_of_birth}\n"\
                f"Address: {self.address}\n"\
                f"Phone number: {self.phone_number}\n"\
                f"Major: {self.major}\n"\
                f"Date of enrollment: {self.date_of_enrollment}\n"\
-               f"Year:{self.year}\n"\
-               f"Status:{self.status}\n"\
-               f"Internships:{self.internship}"
+               f"Year:{ self.year}\n"\
+               f"Status: {self.status}\n"\
+               f"Internships:{ self.internship}\n"
 
     def promote_student(self):
         self.year += 1

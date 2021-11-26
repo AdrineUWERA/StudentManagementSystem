@@ -15,12 +15,14 @@ class InternationalBusinessAndTradeStudent(Student):
     def view_degree_program_outline():
         ibt_program_outline = open("ibt_degree_program_outline", "r")
         print(ibt_program_outline.read())
+        ibt_program_outline.close()
+        return True
 
     def promote_student(self):
         if self.year == 3:
             return "The student was in his/her final year."
         else:
-            super().promote_student()
+            return super().promote_student()
 
     def change_student_status(self):
         if datetime.datetime.now() >= self.expected_graduation_date:
