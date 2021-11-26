@@ -4,7 +4,8 @@ student_records = []
 
 
 class Student:
-    def __init__(self, student_email, student_name, gender, date_of_birth, address, phone_number, year):
+    def __init__(self, student_email, student_name, gender, date_of_birth, address, phone_number,
+                 date_of_enrollment, year):
         self.student_email = student_email
         self.student_name = student_name
         self.gender = gender
@@ -14,7 +15,8 @@ class Student:
         self.major = ""
         self.year = year
         self.student_status = "Current"
-        self.date_of_enrollment = datetime.datetime.now()
+        date_of_enrollment = list(map(int, date_of_enrollment.strip(" 0").split()))
+        self.date_of_enrollment = datetime.datetime(date_of_enrollment[0], date_of_enrollment[1], date_of_enrollment[2])
         self.year = year
         self.status = "Current"
         self.internship = []
@@ -62,5 +64,5 @@ class Student:
         return "internship added successfully!"
 
 
-st1 = Student("a", "b", "c","d","e","f","g")
-print(st1.print_student_information())
+# st1 = Student("a", "b", "c","d","e","f","g")
+# print(st1.print_student_information())

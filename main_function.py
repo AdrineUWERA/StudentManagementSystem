@@ -56,10 +56,12 @@ def main():
                     student_email=input("Enter student's email: "),
                     student_name=input("Enter student's name: "),
                     gender=input("Enter student's gender: "),
-                    date_of_birth=input("Enter student's date of birth (YYYY-MM-DD): "),
+                    date_of_birth=input("Enter student's date of birth (YYYY-MM-DD) and use digit: "),
                     address=input("Enter student's address: "),
                     phone_number=input("Enter student's phone number: "),
                     year=input("Enter student's year of study: "),
+                    date_of_enrollment=input("Enter student's date of enrollment (YYYY MM DD) "
+                                             "separated by space and use digit"),
                     github_username=input("Enter student's Github username: "))
 
             elif student_major == '2':
@@ -70,6 +72,8 @@ def main():
                     date_of_birth=input("Enter student's date of birth (YYYY-MM-DD): "),
                     address=input("Enter student's address: "),
                     phone_number=input("Enter student's phone number: "),
+                    date_of_enrollment=input("Enter student's date of enrollment (YYYY MM DD) "
+                                             "separated by space and use digit"),
                     year=input("Enter student's year of study: "))
 
             elif student_major == '3':
@@ -80,6 +84,8 @@ def main():
                     date_of_birth=input("Enter student's date of birth: "),
                     address=input("Enter student's address: "),
                     phone_number=input("Enter student's phone number: "),
+                    date_of_enrollment=input("Enter student's date of enrollment (YYYY MM DD) "
+                                             "separated by space and use digit"),
                     year=input("Enter student's year of study: "),
                     mission=input("Enter student's mission: "))
             elif student_major == '4':
@@ -90,6 +96,8 @@ def main():
                     date_of_birth=input("Enter student's date of birth (YYYY-MM-DD): "),
                     address=input("Enter student's address: "),
                     phone_number=input("Enter student's phone number: "),
+                    date_of_enrollment=input("Enter student's date of enrollment (YYYY MM DD) "
+                                             "separated by space and use digit"),
                     year=input("Enter student's year of study: "))
 
         elif action == '2':

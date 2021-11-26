@@ -2,8 +2,10 @@ from student import *
 
 
 class EntrepreneurshipStudent(Student):
-    def __init__(self, student_email, student_name, gender, date_of_birth, address, phone_number,year):
-        super().__init__(student_email, student_name, gender, date_of_birth, address, phone_number, year)
+    def __init__(self, student_email, student_name, gender, date_of_birth, address, phone_number,
+                 date_of_enrollment, year):
+        super().__init__(student_email, student_name, gender, date_of_birth, address, phone_number,
+                         date_of_enrollment, year)
         self.major = "Entrepreneurship"
         self.venture = []
         self.expected_graduation_date = self.date_of_enrollment + datetime.timedelta(weeks=104)
