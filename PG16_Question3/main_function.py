@@ -2,8 +2,9 @@ from computer_science_student import ComputerScienceStudent
 from global_challenges_student import GlobalChallengesStudent
 from international_business_and_trade_student_class import InternationalBusinessAndTradeStudent
 from entrepreneurship_student_class import EntrepreneurshipStudent
-from student import student_records
+# from student import student_records
 import sys
+import csv
 
 print("\nALU STUDENT MANAGEMENT SYSTEM")
 print("-----------------------------")
@@ -11,8 +12,7 @@ print("-----------------------------")
 
 def re_run():
     while True:
-        operation2 = str(
-            input("\nEnter 'Y' if you would like to do any other operation and 'N' if you do not want to: "))
+        operation2 = str(input("\nEnter 'Y' if you would like to do any other operation and 'N' if you do not want to: "))
         if operation2.upper() in ('Y', 'N'):
             break
         print("\nInvalid input. Choose 'Y' or 'N'.\n")
@@ -20,6 +20,64 @@ def re_run():
         main()
     else:
         sys.exit("Thank you!!")
+
+
+def retrieve_student(email):
+    with open("student_records.csv", 'r') as student_records:
+        read_student = csv.reader(student_records)
+        for student in read_student:
+            if email == student[0]:
+                if student[6] == "Computer Science":
+                    student1 = ComputerScienceStudent(
+                        student_email=student[0],
+                        student_name=student[1],
+                        gender=student[2],
+                        date_of_birth=student[3],
+                        address=student[4],
+                        phone_number=student[5],
+                        date_of_enrollment=student[7],
+                        year=int(student[8]),
+                        github_username=student[10])
+                    return student1
+
+                elif student[6] == "International Business And Trade":
+                    student1 = InternationalBusinessAndTradeStudent(
+                        student_email=student[0],
+                        student_name=student[1],
+                        gender=student[2],
+                        date_of_birth=student[3],
+                        address=student[4],
+                        phone_number=student[5],
+                        date_of_enrollment=student[7],
+                        year=int(student[8]))
+                    return student1
+
+                elif student[6] == "Global Challenges":
+                    student1 = GlobalChallengesStudent(
+                        student_email=student[0],
+                        student_name=student[1],
+                        gender=student[2],
+                        date_of_birth=student[3],
+                        address=student[4],
+                        phone_number=student[5],
+                        date_of_enrollment=student[7],
+                        year=int(student[8]),
+                        mission=student[10])
+                    return student1
+
+                elif student[6] == "Entrepreneurship":
+                    student1 = EntrepreneurshipStudent(
+                        student_email=student[0],
+                        student_name=student[1],
+                        gender=student[2],
+                        date_of_birth=student[3],
+                        address=student[4],
+                        phone_number=student[5],
+                        date_of_enrollment=student[7],
+                        year=int(student[8]))
+                    return student1
+        else:
+            return "Couldn't find the student with email provided! Check the email and try again.\n"
 
 
 def main():
@@ -60,8 +118,8 @@ def main():
                     date_of_birth=input("Enter student's date of birth (YYYY-MM-DD) and use digit: "),
                     address=input("Enter student's address: "),
                     phone_number=input("Enter student's phone number: "),
-                    date_of_enrollment=input("Enter student's date of enrollment (YYYY MM DD) "
-                                             "separated by space and use digit"),
+                    date_of_enrollment=input("Enter student's date of enrollment (YYYY-MM-DD) "
+                                             "separated by space and use digit: "),
                     year=input("Enter student's year of study: "),
                     github_username=input("Enter student's Github username: "))
 
@@ -74,7 +132,7 @@ def main():
                     address=input("Enter student's address: "),
                     phone_number=input("Enter student's phone number: "),
                     date_of_enrollment=input("Enter student's date of enrollment (YYYY MM DD) "
-                                             "separated by space and use digit"),
+                                             "separated by space and use digit: "),
                     year=input("Enter student's year of study: "))
 
             elif student_major == '3':
@@ -86,7 +144,7 @@ def main():
                     address=input("Enter student's address: "),
                     phone_number=input("Enter student's phone number: "),
                     date_of_enrollment=input("Enter student's date of enrollment (YYYY MM DD) "
-                                             "separated by space and use digit"),
+                                             "separated by space and use digit: "),
                     year=input("Enter student's year of study: "),
                     mission=input("Enter student's mission: "))
             elif student_major == '4':
@@ -98,65 +156,58 @@ def main():
                     address=input("Enter student's address: "),
                     phone_number=input("Enter student's phone number: "),
                     date_of_enrollment=input("Enter student's date of enrollment (YYYY MM DD) "
-                                             "separated by space and use digit"),
+                                             "separated by space and use digit: "),
                     year=input("Enter student's year of study: "))
 
         elif action == '2':
             print("\nStudent information")
             print("-------------------")
             email = input("Enter student email: ")
-            for student in student_records:
-                if student.student_email == email:
-                    print(student.print_student_information())
-                    break
+            student2 = retrieve_student(email)
+            if student2 == "Couldn't find the student with email provided! Check the email and try again.\n":
+                print(student2)
             else:
-                print("Couldn't find the student with email provided! Check the email and try again.\n")
+                print(student2.print_student_information())
 
         elif action == '3':
             print("\nPromote student")
             print("---------------")
             email = input("Enter student email: ")
-            for student in student_records:
-                if student.student_email == email:
-                    print(student.promote_student())
-                    break
+            student2 = retrieve_student(email)
+            if student2 == "Couldn't find the student with email provided! Check the email and try again.\n":
+                print(student2)
             else:
-                print("Couldn't find the student with email provided! Check the email and try again.\n")
+                print(student2.promote_student())
 
         elif action == '4':
             print("\nChange student's status")
             print("-----------------------")
             email = input("Enter student email: ")
-            for student in student_records:
-                if student.student_email == email:
-                    print(student.change_student_status())
-                    break
+            student2 = retrieve_student(email)
+            if student2 == "Couldn't find the student with email provided! Check the email and try again.\n":
+                print(student2)
             else:
-                print("Couldn't find the student with email provided! Check the email and try again.\n")
+                print(student2.change_student_status())
 
-        elif action == '5':
+        elif action == '5':         # STOPPED HEREEEEEEEEEEEEEEEEEEEEEEEEE
             print("\nUpdate student information")
             print("--------------------------")
             email = input("Enter student email: ")
-            for student in student_records:
-                if student.student_email == email:
-                    print(student.update_student_information())
-                    break
-
+            student2 = retrieve_student(email)
+            if student2 == "Couldn't find the student with email provided! Check the email and try again.\n":
+                print(student2)
             else:
-                print("Couldn't find the student with email provided! Check the email and try again.\n")
+                print(student2.update_student_information())
 
         elif action == '6':
             print("\nView degree program outline")
             print("---------------------------")
             email = input("Enter student email: ")
-            for student in student_records:
-                if student.student_email == email:
-                    student.view_degree_program_outline()
-                    break
-
+            student2 = retrieve_student(email)
+            if student2 == "Couldn't find the student with email provided! Check the email and try again.\n":
+                print(student2)
             else:
-                print("Couldn't find the student with email provided! Check the email and try again.\n")
+                student2.view_degree_program_outline()
 
         elif action == '7':
             print("\nAdd student internship")
@@ -208,13 +259,11 @@ def main():
             print("\nView degree program outline")
             print("---------------------------")
             email = input("Enter student email: ")
-            for student in student_records:
-                if student.student_email == email:
-                    student.view_degree_program_outline()
-                    break
-
+            student2 = retrieve_student(email)
+            if student2 == "Couldn't find the student with email provided! Check the email and try again.\n":
+                print(student2)
             else:
-                print("Couldn't find the student with email provided! Check the email and try again.\n")
+                student2.view_degree_program_outline()
 
         elif action == '3':
             print("\nAdd student internship")

@@ -1,7 +1,5 @@
 import datetime
 
-student_records = []
-
 
 class Student:
     def __init__(self, student_email, student_name, gender, date_of_birth, address, phone_number,
@@ -14,14 +12,14 @@ class Student:
         self.phone_number = phone_number
         self.major = ""
         self.year = year
-        date_of_enrollment = list(map(int, date_of_enrollment.strip(" 0").split()))
-        self.date_of_enrollment = datetime.datetime(date_of_enrollment[0], date_of_enrollment[1], date_of_enrollment[2])
+        date_of_enrollment = list(map(int, date_of_enrollment.strip().split("-")))
+        self.date_of_enrollment = datetime.date(date_of_enrollment[0], date_of_enrollment[1], date_of_enrollment[2])
         self.year = year
         self.status = "Current"
         self.internship = []
-        student_records.append(self)
 
     def print_student_information(self):
+        
         return f"Student information: \n"\
                f"Student email: {self.student_email}\n"\
                f"Student name: {self.student_name}\n"\
@@ -61,7 +59,3 @@ class Student:
 
         self.internship.append(internship_details)
         return "internship added successfully!"
-
-
-# st1 = Student("a", "b", "c","d","e","f","g")
-# print(st1.print_student_information())
