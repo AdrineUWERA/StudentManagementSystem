@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="54589a87-9868-406a-96d6-3c30527a4b44" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/computer_science_student.py" beforeDir="false" afterPath="$PROJECT_DIR$/computer_science_student.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/global_challenges_student.py" beforeDir="false" afterPath="$PROJECT_DIR$/global_challenges_student.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,8 +30,9 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
-  <component name="RunManager" selected="Python.testComputerScienceStudent">
+  <component name="RunManager" selected="Python.main_function">
     <configuration name="main_function" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
