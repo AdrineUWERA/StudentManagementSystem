@@ -29,7 +29,7 @@ class GlobalChallengesStudent(Student):
 
     def change_student_status(self):
         if datetime.datetime.now() >= self.expected_graduation_date:
-            self.student_status = "Alumni"
+            self.status = "Alumni"
             return "Student done is done with the degree program"
 
         else:
