@@ -14,7 +14,7 @@ class Student:
         self.phone_number = phone_number
         self.major = ""
         self.year = year
-        date_of_enrollment = list(map(int, date_of_enrollment.strip(" 0").split()))
+        date_of_enrollment = list(map(int, date_of_enrollment.strip().split("-")))
         self.date_of_enrollment = datetime.datetime(date_of_enrollment[0], date_of_enrollment[1], date_of_enrollment[2])
         self.year = year
         self.status = "Current"

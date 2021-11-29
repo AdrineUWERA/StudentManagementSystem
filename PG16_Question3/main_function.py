@@ -213,13 +213,11 @@ def main():
             print("\nAdd student internship")
             print("---------------------------")
             email = input("Enter student email: ")
-            for student in student_records:
-                if student.student_email == email:
-                    print(student.add_student_internship())
-                    break
-
+            student2 = retrieve_student(email)
+            if student2 == "Couldn't find the student with email provided! Check the email and try again.\n":
+                print(student2)
             else:
-                print("Couldn't find the student with email provided! Check the email and try again.\n")
+                print(student2.add_student_internship())
 
         elif action == '8':
             print("\nAdd student's venture")
@@ -266,16 +264,14 @@ def main():
                 student2.view_degree_program_outline()
 
         elif action == '3':
-            print("\nAdd student internship")
+            print("\nAdd internship")
             print("---------------------------")
             email = input("Enter student email: ")
-            for student in student_records:
-                if student.student_email == email:
-                    print(student.add_student_internship())
-                    break
-
+            student2 = retrieve_student(email)
+            if student2 == "Couldn't find the student with email provided! Check the email and try again.\n":
+                print(student2)
             else:
-                print("Couldn't find the student with email provided! Check the email and try again.\n")
+                print(student2.add_student_internship())
 
         elif action == '4':
             print("\nAdd venture")

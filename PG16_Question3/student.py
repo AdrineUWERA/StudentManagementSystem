@@ -1,4 +1,5 @@
 import datetime
+import csv
 
 
 class Student:
@@ -41,21 +42,97 @@ class Student:
         print("Choose: \n1.Update phone number\n2.Update address\n")
         choice = int(input("Enter your choice: "))
         if choice == 1:
-            new_phone_number = input("Enter student's new phone number: ")
-            self.phone_number = new_phone_number
+            with open("student_records.csv", 'r') as student_records:
+                read_student = csv.reader(student_records)
+                updated_student_records = []
+                for student in read_student:
+                    if self.student_email == student[0]:
+                        new_phone_number = input("Enter student's new phone number: ")
+                        self.phone_number = new_phone_number
+                        student[5] = self.phone_number
+                    updated_student_records.append(student)
+
+            with open("student_records.csv", 'w', newline="") as student_records:
+                fieldnames = ['student_email', 'student_name', 'gender', 'date_of_birth', 'address', 'phone_number',
+                              'major', 'date_of_enrollment', 'year', 'status', 'github_username/venture/mission',
+                              'expected_graduation_date', "internship"]
+                write_student = csv.DictWriter(student_records, fieldnames=fieldnames)
+                for student in updated_student_records:
+                    write_student.writerow(
+                        {"student_email": student[0], "student_name": student[1], "gender": student[2],
+                         "date_of_birth": student[3],
+                         "address": student[4], "phone_number": student[5], "major": student[6],
+                         "date_of_enrollment": student[7],
+                         "year": student[8], "status": student[9], "github_username/venture/mission": student[10],
+                         "expected_graduation_date": student[11], "internship": student[12]})
+                    
             return f"Phone number updated successfully to {self.phone_number}"
+        
         elif choice == 2:
-            new_address = input("Enter student's new address: ")
-            self.address = new_address
+            with open("student_records.csv", 'r') as student_records:
+                read_student = csv.reader(student_records)
+                updated_student_records = []
+                for student in read_student:
+                    if self.student_email == student[0]:
+                        new_address = input("Enter student's new address: ")
+                        self.address = new_address
+                        student[4] = self.address
+                    updated_student_records.append(student)
+
+            with open("student_records.csv", 'w', newline="") as student_records:
+                fieldnames = ['student_email', 'student_name', 'gender', 'date_of_birth', 'address', 'phone_number',
+                              'major', 'date_of_enrollment', 'year', 'status', 'github_username/venture/mission',
+                              'expected_graduation_date', "internship"]
+                write_student = csv.DictWriter(student_records, fieldnames=fieldnames)
+                for student in updated_student_records:
+                    write_student.writerow(
+                        {"student_email": student[0], "student_name": student[1], "gender": student[2],
+                         "date_of_birth": student[3],
+                         "address": student[4], "phone_number": student[5], "major": student[6],
+                         "date_of_enrollment": student[7],
+                         "year": student[8], "status": student[9], "github_username/venture/mission": student[10],
+                         "expected_graduation_date": student[11], "internship": student[12]})
+
             return f"Address updated successfully to {self.address}"
         else:
             return "Invalid input!"
 
     def add_student_internship(self):
-        internship_details = {"Company name": input("Enter the name of the company the student interned at: "),
-                              "Start date": input("Enter the start date of the internship: "),
-                              "End date": input("Enter the end date of the internship: "),
-                              "Position": input("Enter the position the student had in the internship: ")}
+        with open("student_records.csv", 'r') as student_records:
+            read_student = csv.reader(student_records)
+            updated_student_records = []
+            for student in read_student:
+                if self.student_email == student[0]:
+                    internship_details = {
+                        "Company name": input("Enter the name of the company the student interned at: "),
+                        "Start date": input("Enter the start date of the internship: "),
+                        "End date": input("Enter the end date of the internship: "),
+                        "Position": input("Enter the position the student had in the internship: ")}
+                if student[12] != '[]':
+                    self.internship.append(student[12])
+                    self.internship.append(internship_details)
+                    student[12] = ''
+                    for internship in self.internship:
+                        student[12] += str(internship)
+                else:
+                    student[12] = ""
+                    self.internship.append(internship_details)
+                    for internship in self.internship:
+                        student[12] += str(internship)
+                updated_student_records.append(student)
 
-        self.internship.append(internship_details)
+        with open("student_records.csv", 'w', newline="") as student_records:
+            fieldnames = ['student_email', 'student_name', 'gender', 'date_of_birth', 'address', 'phone_number',
+                          'major', 'date_of_enrollment', 'year', 'status', 'github_username/venture/mission',
+                          'expected_graduation_date', "internship"]
+            write_student = csv.DictWriter(student_records, fieldnames=fieldnames)
+            for student in updated_student_records:
+                write_student.writerow(
+                    {"student_email": student[0], "student_name": student[1], "gender": student[2],
+                     "date_of_birth": student[3],
+                     "address": student[4], "phone_number": student[5], "major": student[6],
+                     "date_of_enrollment": student[7],
+                     "year": student[8], "status": student[9], "github_username/venture/mission": student[10],
+                     "expected_graduation_date": student[11], "internship": student[12]})
+
         return "internship added successfully!"

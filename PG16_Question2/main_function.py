@@ -60,7 +60,7 @@ def main():
                     date_of_birth=input("Enter student's date of birth (YYYY-MM-DD) and use digit: "),
                     address=input("Enter student's address: "),
                     phone_number=input("Enter student's phone number: "),
-                    date_of_enrollment=input("Enter student's date of enrollment (YYYY MM DD) "
+                    date_of_enrollment=input("Enter student's date of enrollment (YYYY-MM-DD) "
                                              "separated by space and use digit"),
                     year=input("Enter student's year of study: "),
                     github_username=input("Enter student's Github username: "))
@@ -73,7 +73,7 @@ def main():
                     date_of_birth=input("Enter student's date of birth (YYYY-MM-DD): "),
                     address=input("Enter student's address: "),
                     phone_number=input("Enter student's phone number: "),
-                    date_of_enrollment=input("Enter student's date of enrollment (YYYY MM DD) "
+                    date_of_enrollment=input("Enter student's date of enrollment (YYYY-MM-DD) "
                                              "separated by space and use digit"),
                     year=input("Enter student's year of study: "))
 
@@ -85,7 +85,7 @@ def main():
                     date_of_birth=input("Enter student's date of birth: "),
                     address=input("Enter student's address: "),
                     phone_number=input("Enter student's phone number: "),
-                    date_of_enrollment=input("Enter student's date of enrollment (YYYY MM DD) "
+                    date_of_enrollment=input("Enter student's date of enrollment (YYYY-MM-DD) "
                                              "separated by space and use digit"),
                     year=input("Enter student's year of study: "),
                     mission=input("Enter student's mission: "))
@@ -97,7 +97,7 @@ def main():
                     date_of_birth=input("Enter student's date of birth (YYYY-MM-DD): "),
                     address=input("Enter student's address: "),
                     phone_number=input("Enter student's phone number: "),
-                    date_of_enrollment=input("Enter student's date of enrollment (YYYY MM DD) "
+                    date_of_enrollment=input("Enter student's date of enrollment (YYYY-MM-DD) "
                                              "separated by space and use digit"),
                     year=input("Enter student's year of study: "))
 
@@ -217,7 +217,7 @@ def main():
                 print("Couldn't find the student with email provided! Check the email and try again.\n")
 
         elif action == '3':
-            print("\nAdd student internship")
+            print("\nAdd internship")
             print("---------------------------")
             email = input("Enter student email: ")
             for student in student_records:

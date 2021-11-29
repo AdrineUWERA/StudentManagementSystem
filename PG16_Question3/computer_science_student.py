@@ -14,20 +14,22 @@ class ComputerScienceStudent(Student):
         with open("student_records.csv", 'r') as student_records:
             read_student = csv.reader(student_records)
             for student in read_student:
-                if self.student_email == student[0]:
+                if self.student_email in student:
                     break
             else:
                 with open("student_records.csv", 'a', newline='') as add_record:
                     fieldnames = ['student_email', 'student_name', 'gender', 'date_of_birth', 'address', 'phone_number',
-                                  'major', 'date_of_enrollment', 'year', 'status', 'github_username/venture/mission', 'expected_graduation_date']
+                                  'major', 'date_of_enrollment', 'year', 'status', 'github_username/venture/mission',
+                                  'expected_graduation_date', 'internship']
                     record_student = csv.DictWriter(add_record, fieldnames=fieldnames)
                     record_student.writerow(
                         {"student_email": self.student_email, "student_name": self.student_name, "gender": self.gender,
                          "date_of_birth": self.date_of_birth,
                          "address": self.address, "phone_number": self.phone_number, "major": self.major,
                          "date_of_enrollment": self.date_of_enrollment,
-                         "year": self.year, "status": self.status, "github_username/venture/mission": self.github_username,
-                         "expected_graduation_date": self.expected_graduation_date})
+                         "year": self.year, "status": self.status, 
+                         "github_username/venture/mission": self.github_username,
+                         "expected_graduation_date": self.expected_graduation_date, "internship": self.internship})
                 print("Computer science student registered successfully!")
 
     @staticmethod
@@ -53,7 +55,8 @@ class ComputerScienceStudent(Student):
 
             with open("student_records.csv", 'w', newline="") as student_records:
                 fieldnames = ['student_email', 'student_name', 'gender', 'date_of_birth', 'address', 'phone_number',
-                              'major', 'date_of_enrollment', 'year', 'status', 'github_username/venture/mission', 'expected_graduation_date']
+                              'major', 'date_of_enrollment', 'year', 'status', 'github_username/venture/mission', 
+                              'expected_graduation_date', 'internship']
                 write_student = csv.DictWriter(student_records, fieldnames=fieldnames)
                 for student in updated_student_records:
                     write_student.writerow(
@@ -62,7 +65,7 @@ class ComputerScienceStudent(Student):
                          "address": student[4], "phone_number": student[5], "major": student[6],
                          "date_of_enrollment": student[7],
                          "year": student[8], "status": student[9], "github_username/venture/mission": student[10],
-                         "expected_graduation_date": student[11]})
+                         "expected_graduation_date": student[11],  "internship": student[12]})
             return f"Student is now in year {self.year}"
 
     def change_student_status(self):
@@ -78,7 +81,8 @@ class ComputerScienceStudent(Student):
 
             with open("student_records.csv", 'w', newline="") as student_records:
                 fieldnames = ['student_email', 'student_name', 'gender', 'date_of_birth', 'address', 'phone_number',
-                              'major', 'date_of_enrollment', 'year', 'status', 'github_username/venture/mission', 'expected_graduation_date']
+                              'major', 'date_of_enrollment', 'year', 'status', 'github_username/venture/mission', 
+                              'expected_graduation_date', "internship"]
                 write_student = csv.DictWriter(student_records, fieldnames=fieldnames)
                 for student in updated_student_records:
                     write_student.writerow(
@@ -87,7 +91,7 @@ class ComputerScienceStudent(Student):
                          "address": student[4], "phone_number": student[5], "major": student[6],
                          "date_of_enrollment": student[7],
                          "year": student[8], "status": student[9], "github_username/venture/mission": student[10],
-                         "expected_graduation_date": student[11]})
+                         "expected_graduation_date": student[11], "internship": student[12]})
 
             return "Student done is done with the degree program"
 
@@ -111,6 +115,6 @@ class ComputerScienceStudent(Student):
                f"Expected graduation date: {self.expected_graduation_date}"
 
 
-# st1 = ComputerScienceStudent("a", "b", "c", "d", "e", "f", "2017 10 01", 3, "i")
+st1 = ComputerScienceStudent("we", "b", "c", "d", "e", "f", "2017-10-01", 3, "i")
 # print(st1.change_student_status())
 # print(st1.promote_student())
