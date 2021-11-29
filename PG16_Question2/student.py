@@ -61,7 +61,3 @@ class Student:
 
         self.internship.append(internship_details)
         return "internship added successfully!"
-
-
-# st1 = Student("a", "b", "c","d","e","f","g")
-# print(st1.print_student_information())

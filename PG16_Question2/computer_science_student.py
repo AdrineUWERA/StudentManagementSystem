@@ -38,7 +38,3 @@ class ComputerScienceStudent(Student):      # class named ComputerScienceStudent
     def print_student_information(self):
         return super().print_student_information() + f"\nGithub username: {self.github_username}\n"\
               f"Expected graduation date: {self.expected_graduation_date}"
-
-
-# st1 = ComputerScienceStudent("a", "b", "c","d","e","f","g","h","i","k")
-# st1.view_degree_program_outline()

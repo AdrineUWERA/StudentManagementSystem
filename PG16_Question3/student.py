@@ -108,17 +108,17 @@ class Student:
                         "Start date": input("Enter the start date of the internship: "),
                         "End date": input("Enter the end date of the internship: "),
                         "Position": input("Enter the position the student had in the internship: ")}
-                if student[12] != '[]':
-                    self.internship.append(student[12])
-                    self.internship.append(internship_details)
-                    student[12] = ''
-                    for internship in self.internship:
-                        student[12] += str(internship)
-                else:
-                    student[12] = ""
-                    self.internship.append(internship_details)
-                    for internship in self.internship:
-                        student[12] += str(internship)
+                    if student[12] != '[]':
+                        self.internship.append(student[12])
+                        self.internship.append(internship_details)
+                        student[12] = ''
+                        for internship in self.internship:
+                            student[12] += str(internship)
+                    else:
+                        student[12] = ""
+                        self.internship.append(internship_details)
+                        for internship in self.internship:
+                            student[12] += str(internship)
                 updated_student_records.append(student)
 
         with open("student_records.csv", 'w', newline="") as student_records:

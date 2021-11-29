@@ -160,7 +160,7 @@ def main():
 
         elif action == '7':
             print("\nAdd student internship")
-            print("---------------------------")
+            print("----------------------")
             email = input("Enter student email: ")
             for student in student_records:
                 if student.student_email == email:
@@ -172,7 +172,7 @@ def main():
 
         elif action == '8':
             print("\nAdd student's venture")
-            print("---------------------------")
+            print("----------------------")
             email = input("Enter student email: ")
             for student in student_records:
                 if student.student_email == email:
@@ -218,7 +218,7 @@ def main():
 
         elif action == '3':
             print("\nAdd internship")
-            print("---------------------------")
+            print("---------------")
             email = input("Enter student email: ")
             for student in student_records:
                 if student.student_email == email:

@@ -131,7 +131,7 @@ def main():
                     date_of_birth=input("Enter student's date of birth (YYYY-MM-DD): "),
                     address=input("Enter student's address: "),
                     phone_number=input("Enter student's phone number: "),
-                    date_of_enrollment=input("Enter student's date of enrollment (YYYY MM DD) "
+                    date_of_enrollment=input("Enter student's date of enrollment (YYYY-MM-DD) "
                                              "separated by space and use digit: "),
                     year=input("Enter student's year of study: "))
 
@@ -143,7 +143,7 @@ def main():
                     date_of_birth=input("Enter student's date of birth: "),
                     address=input("Enter student's address: "),
                     phone_number=input("Enter student's phone number: "),
-                    date_of_enrollment=input("Enter student's date of enrollment (YYYY MM DD) "
+                    date_of_enrollment=input("Enter student's date of enrollment (YYYY-MM-DD) "
                                              "separated by space and use digit: "),
                     year=input("Enter student's year of study: "),
                     mission=input("Enter student's mission: "))
@@ -155,7 +155,7 @@ def main():
                     date_of_birth=input("Enter student's date of birth (YYYY-MM-DD): "),
                     address=input("Enter student's address: "),
                     phone_number=input("Enter student's phone number: "),
-                    date_of_enrollment=input("Enter student's date of enrollment (YYYY MM DD) "
+                    date_of_enrollment=input("Enter student's date of enrollment (YYYY-MM-DD) "
                                              "separated by space and use digit: "),
                     year=input("Enter student's year of study: "))
 
@@ -189,7 +189,7 @@ def main():
             else:
                 print(student2.change_student_status())
 
-        elif action == '5':         # STOPPED HEREEEEEEEEEEEEEEEEEEEEEEEEE
+        elif action == '5':
             print("\nUpdate student information")
             print("--------------------------")
             email = input("Enter student email: ")
@@ -211,7 +211,7 @@ def main():
 
         elif action == '7':
             print("\nAdd student internship")
-            print("---------------------------")
+            print("----------------------")
             email = input("Enter student email: ")
             student2 = retrieve_student(email)
             if student2 == "Couldn't find the student with email provided! Check the email and try again.\n":
@@ -221,7 +221,7 @@ def main():
 
         elif action == '8':
             print("\nAdd student's venture")
-            print("---------------------------")
+            print("---------------------")
             email = input("Enter student email: ")
             student2 = retrieve_student(email)
             if student2 == "Couldn't find the student with email provided! Check the email and try again.\n":
@@ -262,7 +262,7 @@ def main():
 
         elif action == '3':
             print("\nAdd internship")
-            print("---------------------------")
+            print("----------------")
             email = input("Enter student email: ")
             student2 = retrieve_student(email)
             if student2 == "Couldn't find the student with email provided! Check the email and try again.\n":
@@ -272,7 +272,7 @@ def main():
 
         elif action == '4':
             print("\nAdd venture")
-            print("----------------")
+            print("-----------")
             email = input("Enter student email: ")
             student2 = retrieve_student(email)
             if student2 == "Couldn't find the student with email provided! Check the email and try again.\n":

@@ -99,17 +99,21 @@ class GlobalChallengesStudent(Student):
             return f"Student will graduate on {self.expected_graduation_date}"
     
     def print_student_information(self):
-        return f"Student information: \n" \
-               f"Student email: {self.student_email}\n" \
-               f"Student name: {self.student_name}\n" \
-               f"Gender: {self.gender}\n" \
-               f"Date of birth: {self.date_of_birth}\n" \
-               f"Address: {self.address}\n" \
-               f"Phone number: {self.phone_number}\n" \
-               f"Major: {self.major}\n" \
-               f"Date of enrollment: {self.date_of_enrollment}\n" \
-               f"Year:{self.year}\n" \
-               f"Status: {self.status}\n" \
-               f"Internships:{self.internship}\n" \
-               f"Mission: {self.mission}\n" \
-               f"Expected graduation date: {self.expected_graduation_date}"
+        with open("student_records.csv", 'r') as student_records:
+            read_student = csv.reader(student_records)
+            for student in read_student:
+                if self.student_email == student[0]:
+                    return f"Student information: \n" \
+                           f"Student email: {student[0]}\n" \
+                           f"Student name: {student[1]}\n" \
+                           f"Gender: {student[2]}\n" \
+                           f"Date of birth: {student[3]}\n" \
+                           f"Address: {student[4]}\n" \
+                           f"Phone number: {student[5]}\n" \
+                           f"Major: {student[6]}\n" \
+                           f"Date of enrollment: {student[7]}\n" \
+                           f"Year:{student[8]}\n" \
+                           f"Status: {student[9]}\n" \
+                           f"Mission: {student[10]}\n" \
+                           f"Expected graduation date: {student[11]}\n" \
+                           f"Internships:{student[12]}\n"
