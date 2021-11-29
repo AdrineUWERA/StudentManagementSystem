@@ -223,16 +223,15 @@ def main():
             print("\nAdd student's venture")
             print("---------------------------")
             email = input("Enter student email: ")
-            for student in student_records:
-                if student.student_email == email:
-                    if student.major == "International Business And Trade" or student.major == "Entrepreneurship":
-                        print(student.add_venture_details())
-                        break
-                    else:
-                        print("Student's major must be IBT or ENT to add venture.")
-
+            student2 = retrieve_student(email)
+            if student2 == "Couldn't find the student with email provided! Check the email and try again.\n":
+                print(student2)
             else:
-                print("Couldn't find the student with email provided! Check the email and try again.\n")
+                if student2.major == "International Business And Trade" or student2.major == "Entrepreneurship":
+                    print(student2.add_venture_details())
+                    # break
+                else:
+                    print("Student's major must be IBT or ENT to add venture.")
 
     elif user == '2':
         print("\nChoose \n"
@@ -245,13 +244,11 @@ def main():
             print("\nUpdate student information")
             print("--------------------------")
             email = input("Enter student email: ")
-            for student in student_records:
-                if student.student_email == email:
-                    print(student.update_student_information())
-                    break
-
+            student2 = retrieve_student(email)
+            if student2 == "Couldn't find the student with email provided! Check the email and try again.\n":
+                print(student2)
             else:
-                print("Couldn't find the student with email provided! Check the email and try again.\n")
+                print(student2.update_student_information())
 
         elif action == '2':
             print("\nView degree program outline")
@@ -277,15 +274,15 @@ def main():
             print("\nAdd venture")
             print("----------------")
             email = input("Enter student email: ")
-            for student in student_records:
-                if student.student_email == email:
-                    if student.major == "International Business And Trade" or student.major == "Entrepreneurship":
-                        print(student.add_venture_details())
-                        break
-                    else:
-                        print("You must be an IBT or ENT major to add venture.")
+            student2 = retrieve_student(email)
+            if student2 == "Couldn't find the student with email provided! Check the email and try again.\n":
+                print(student2)
             else:
-                print("Couldn't find the student with email provided! Check the email and try again.\n")
+                if student2.major == "International Business And Trade" or student2.major == "Entrepreneurship":
+                    print(student2.add_venture_details())
+                    # break
+                else:
+                    print("Student's major must be IBT or ENT to add venture.")
 
     re_run()
 

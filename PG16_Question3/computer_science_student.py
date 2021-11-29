@@ -1,6 +1,4 @@
-import csv
-from student import Student
-import datetime
+from student import *
 
 
 class ComputerScienceStudent(Student):
