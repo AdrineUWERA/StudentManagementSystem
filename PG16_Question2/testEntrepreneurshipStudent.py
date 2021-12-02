@@ -5,14 +5,14 @@ from entrepreneurship_student_class import EntrepreneurshipStudent
 class MyTestCase(unittest.TestCase):
     def setUp(self):
         self.ent_student1 = EntrepreneurshipStudent("K.rema@alustudent.com", "Kuma Rema", "M", "2000-05-08",
-                                                    "Kabeza", "+242788786299", "2020 11 26", 1)
+                                                    "Kabeza", "+242788786299", "2020-11-26", 1)
         self.ent_student2 = EntrepreneurshipStudent("l.rema@alustudent.com", "Kuma Rema", "M", "2000-05-08",
-                                                    "Kabeza", "+242788786299", "2019 11 26", 2)
+                                                    "Kabeza", "+242788786299", "2019-11-26", 2)
 
     @staticmethod
     def test__init__():
         ent_student3 = EntrepreneurshipStudent("m.rema@alustudent.com", "Kuma Rema", "M", "2000-05-08",
-                                               "Kabeza", "+242788786299", "2019 11 26", 2)
+                                               "Kabeza", "+242788786299", "2019-11-26", 2)
 
     def test_view_degree_program_outline(self):
         self.assertTrue(self.ent_student1.view_degree_program_outline())

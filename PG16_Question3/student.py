@@ -12,9 +12,16 @@ class Student:
         self.address = address
         self.phone_number = phone_number
         self.major = ""
-        self.year = year
-        date_of_enrollment = list(map(int, date_of_enrollment.strip().split("-")))
-        self.date_of_enrollment = datetime.date(date_of_enrollment[0], date_of_enrollment[1], date_of_enrollment[2])
+        try:
+            date_of_enrollment = list(map(int, date_of_enrollment.strip().split("-")))
+            self.date_of_enrollment = datetime.datetime(date_of_enrollment[0], date_of_enrollment[1],
+                                                        date_of_enrollment[2])
+        except IndexError as e:
+            print("Separate year, month, date with a hyphen(-). Use YYYY-MM-DD format.", e)
+            sys.exit()
+        except ValueError as e:
+            print("Use digits only! And check if date is correct with YYYY-MM-DD format.", e)
+            sys.exit()
         self.year = year
         self.status = "Current"
         self.internship = []
@@ -40,8 +47,8 @@ class Student:
 
     def update_student_information(self):
         print("Choose: \n1.Update phone number\n2.Update address\n")
-        choice = int(input("Enter your choice: "))
-        if choice == 1:
+        choice = input("Enter your choice: ")
+        if choice == '1':
             with open("student_records.csv", 'r') as student_records:
                 read_student = csv.reader(student_records)
                 updated_student_records = []
@@ -68,7 +75,7 @@ class Student:
                     
             return f"Phone number updated successfully to {self.phone_number}"
         
-        elif choice == 2:
+        elif choice == '2':
             with open("student_records.csv", 'r') as student_records:
                 read_student = csv.reader(student_records)
                 updated_student_records = []

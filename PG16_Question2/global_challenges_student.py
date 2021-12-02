@@ -15,10 +15,12 @@ class GlobalChallengesStudent(Student):
 
     @staticmethod
     def view_degree_program_outline():
-        gc_program_outline = open("GC_degree_program_outline.tx", "r")
-        print(gc_program_outline.read())
-        gc_program_outline.close()
-        return True
+        try:
+            with open("GC_degree_program_outline.tx", "r") as gc_program_outline: 
+                print(gc_program_outline.read())
+                return True
+        except OSError as e:
+            print("File not found", e)
 
     def promote_student(self):
         if self.year == 3:

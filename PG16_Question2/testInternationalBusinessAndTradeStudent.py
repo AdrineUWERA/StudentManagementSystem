@@ -5,16 +5,16 @@ from international_business_and_trade_student_class import InternationalBusiness
 class MyTestCase(unittest.TestCase):
     def setUp(self):
         self.ibt_student1 = InternationalBusinessAndTradeStudent("a.ana@alustudent.com", "Allie Ana", "F",
-                                                                "2003 - 02 - 01",
-                                                                "Kimironko", "+234788888888", "2020 11 26", 1)
+                                                                 "2003-02-01",
+                                                                 "Kimironko", "+234788888888", "2020-11-26", 1)
         self.ibt_student2 = InternationalBusinessAndTradeStudent("b.ana@alustudent.com", "Allie Ana", "F",
-                                                                "2003 - 02 - 01",
-                                                                "Kimironko", "+234788888888", "2018 11 26", 3)
+                                                                 "2003-02-01",
+                                                                 "Kimironko", "+234788888888", "2018-11-26", 3)
 
     @staticmethod
     def test__init__():
-        ibt_student3 = InternationalBusinessAndTradeStudent("c.ana@alustudent.com", "Allie Ana", "F", "2003 - 02 - 01",
-                                                           "Kimironko", "+234788888888", "2020 11 26", 1)
+        ibt_student3 = InternationalBusinessAndTradeStudent("c.ana@alustudent.com", "Allie Ana", "F", "2003-02-01",
+                                                            "Kimironko", "+234788888888", "2020-11-26", 1)
 
     def test_view_degree_program_outline(self):
         self.assertTrue(self.ibt_student1.view_degree_program_outline())
@@ -33,7 +33,7 @@ class MyTestCase(unittest.TestCase):
 Student email: a.ana@alustudent.com
 Student name: Allie Ana
 Gender: F
-Date of birth: 2003 - 02 - 01
+Date of birth: 2003-02-01
 Address: Kimironko
 Phone number: +234788888888
 Major: International Business And Trade

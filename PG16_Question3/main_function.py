@@ -2,7 +2,6 @@ from computer_science_student import ComputerScienceStudent
 from global_challenges_student import GlobalChallengesStudent
 from international_business_and_trade_student_class import InternationalBusinessAndTradeStudent
 from entrepreneurship_student_class import EntrepreneurshipStudent
-# from student import student_records
 import sys
 import csv
 

@@ -14,9 +14,16 @@ class Student:
         self.phone_number = phone_number
         self.major = ""
         self.year = year
-        date_of_enrollment = list(map(int, date_of_enrollment.strip().split("-")))
-        self.date_of_enrollment = datetime.datetime(date_of_enrollment[0], date_of_enrollment[1], date_of_enrollment[2])
-        self.year = year
+        try:
+            date_of_enrollment = list(map(int, date_of_enrollment.strip().split("-")))
+            self.date_of_enrollment = datetime.datetime(date_of_enrollment[0], date_of_enrollment[1],
+                                                        date_of_enrollment[2])
+        except IndexError as e:
+            print("Separate year, month, date with a hyphen(-). Use YYYY-MM-DD format.", e)
+            sys.exit()
+        except ValueError as e:
+            print("Use digits only! And check if date is correct with YYYY-MM-DD format.", e)
+            sys.exit()
         self.status = "Current"
         self.internship = []
         student_records.append(self)
@@ -41,12 +48,12 @@ class Student:
 
     def update_student_information(self):
         print("Choose: \n1.Update phone number\n2.Update address\n")
-        choice = int(input("Enter your choice: "))
-        if choice == 1:
+        choice = input("Enter your choice: ")
+        if choice == '1':
             new_phone_number = input("Enter student's new phone number: ")
             self.phone_number = new_phone_number
             return f"Phone number updated successfully to {self.phone_number}"
-        elif choice == 2:
+        elif choice == '2':
             new_address = input("Enter student's new address: ")
             self.address = new_address
             return f"Address updated successfully to {self.address}"
@@ -55,8 +62,8 @@ class Student:
 
     def add_student_internship(self):
         internship_details = {"Company name": input("Enter the name of the company the student interned at: "),
-                              "Start date": input("Enter the start date of the internship: "),
-                              "End date": input("Enter the end date of the internship: "),
+                              "Start date": input("Enter the start date of the internship (YYYY-MM-DD): "),
+                              "End date": input("Enter the end date of the internship (YYYY-MM-DD): "),
                               "Position": input("Enter the position the student had in the internship: ")}
 
         self.internship.append(internship_details)

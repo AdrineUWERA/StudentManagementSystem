@@ -9,16 +9,21 @@ class ComputerScienceStudent(Student):      # class named ComputerScienceStudent
                          date_of_enrollment, year)      # Access init method of student class (parent class)
         self.major = "Computer Science"
         self.github_username = github_username
+        # try:
         self.expected_graduation_date = self.date_of_enrollment + datetime.timedelta(weeks=208)
+        # except TypeError:
+        #     print("no")
         # 208 weeks equals to 4 years
         print("Computer science student registered successfully!")
 
     @staticmethod
     def view_degree_program_outline():
-        cs_program_outline = open("CS_degree_program_outline.tx", "r")
-        print(cs_program_outline.read())
-        cs_program_outline.close()
-        return True
+        try:
+            with open("CS_degree_program_outline.tx", "r") as cs_program_outline:
+                print(cs_program_outline.read())
+                return True
+        except OSError as e:
+            print("File not found", e)
 
     def promote_student(self):
         if self.year == 4:

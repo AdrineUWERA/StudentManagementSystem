@@ -6,13 +6,13 @@ class TestComputerScienceStudent(unittest.TestCase):
 
     def setUp(self):
         self.cs_student1 = ComputerScienceStudent('a.ana@alustudent.com', 'Allie Ana', 'F', '2003-02-01',
-                                                  'Kimironko', '+234788888888', '2021 01 09', 1, 'AllieAn')
+                                                  'Kimironko', '+234788888888', '2021-01-09', 1, 'AllieAn')
         self.cs_student2 = ComputerScienceStudent('k.rema@alustudent.com', 'Kofi Rema', 'M', '2000-07-03',
-                                                  'Gikondo', '+250789888876', '2017 01 01', 4, 'KofiRem')
+                                                  'Gikondo', '+250789888876', '2017-01-01', 4, 'KofiRem')
 
     def test__init__(self):
         cs_student1 = ComputerScienceStudent('a.ana@alustudent.com', 'Allie Ana', 'F', '2003-02-01',
-                                             'Kimironko', '+234788888888', '2021 01 09', 1, 'AllieAn')
+                                             'Kimironko', '+234788888888', '2021-01-09', 1, 'AllieAn')
 
     def test_view_degree_program_outline(self):
         self.assertTrue(self.cs_student1.view_degree_program_outline())

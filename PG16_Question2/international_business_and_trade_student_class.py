@@ -13,10 +13,12 @@ class InternationalBusinessAndTradeStudent(Student):
 
     @staticmethod
     def view_degree_program_outline():
-        ibt_program_outline = open("ibt_degree_program_outline", "r")
-        print(ibt_program_outline.read())
-        ibt_program_outline.close()
-        return True
+        try:
+            with open("ibt_degree_program_outline", "r") as ibt_program_outline:
+                print(ibt_program_outline.read())
+                return True
+        except OSError as e:
+            print("File not found", e)
 
     def promote_student(self):
         if self.year == 3:

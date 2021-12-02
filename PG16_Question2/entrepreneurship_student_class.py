@@ -13,10 +13,12 @@ class EntrepreneurshipStudent(Student):
 
     @staticmethod
     def view_degree_program_outline():
-        ent_program_outline = open("ent_degree_program_outline", "r")
-        print(ent_program_outline.read())
-        ent_program_outline.close()
-        return True
+        try:
+            with open("ent_degree_program_outline", "r") as ent_program_outline:
+                print(ent_program_outline.read())
+                return True
+        except OSError as e:
+            print("File not found", e)
 
     def promote_student(self):
         if self.year == 2:

@@ -6,14 +6,14 @@ class MyTestCase(unittest.TestCase):
 
     def setUp(self):
         self.gc_student1 = GlobalChallengesStudent('m.don@alustudent.com', 'Marion Don', 'F', '2003-02-01',
-                                                   'Kimironko', '+234788638856', '2020 01 01', 1, 'Health')
+                                                   'Kimironko', '+234788638856', '2020-01-01', 1, 'Health')
         self.gc_student2 = GlobalChallengesStudent('M.jimmy@alustudent.com', 'Jimmy Max', 'M', '2000-07-03',
-                                                   'Gikondo', '+250789888876', '2018 01 01', 3, 'Education')
+                                                   'Gikondo', '+250789888876', '2018-01-01', 3, 'Education')
 
     @staticmethod
     def test__init__():
         gc_student1 = GlobalChallengesStudent('m.don@alustudent.com', 'Marion Don', 'F', '2003-02-01',
-                                              'Kimironko', '+234788638856', '2020 01 01', 1, 'Health')
+                                              'Kimironko', '+234788638856', '2020-01-01', 1, 'Health')
 
     def test_view_degree_program_outline(self):
         self.assertTrue(self.gc_student1.view_degree_program_outline())
