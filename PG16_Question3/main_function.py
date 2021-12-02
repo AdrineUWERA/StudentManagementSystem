@@ -22,61 +22,67 @@ def re_run():
 
 
 def retrieve_student(email):
-    with open("student_records.csv", 'r') as student_records:
-        read_student = csv.reader(student_records)
-        for student in read_student:
-            if email == student[0]:
-                if student[6] == "Computer Science":
-                    student1 = ComputerScienceStudent(
-                        student_email=student[0],
-                        student_name=student[1],
-                        gender=student[2],
-                        date_of_birth=student[3],
-                        address=student[4],
-                        phone_number=student[5],
-                        date_of_enrollment=student[7],
-                        year=int(student[8]),
-                        github_username=student[10])
-                    return student1
+    try:
+        with open("student_records.csv", 'r') as student_records:
+            read_student = csv.reader(student_records)
+            for student in read_student:
+                if email == student[0]:
+                    if student[6] == "Computer Science":
+                        student1 = ComputerScienceStudent(
+                            student_email=student[0],
+                            student_name=student[1],
+                            gender=student[2],
+                            date_of_birth=student[3],
+                            address=student[4],
+                            phone_number=student[5],
+                            date_of_enrollment=student[7],
+                            year=int(student[8]),
+                            github_username=student[10])
+                        return student1
 
-                elif student[6] == "International Business And Trade":
-                    student1 = InternationalBusinessAndTradeStudent(
-                        student_email=student[0],
-                        student_name=student[1],
-                        gender=student[2],
-                        date_of_birth=student[3],
-                        address=student[4],
-                        phone_number=student[5],
-                        date_of_enrollment=student[7],
-                        year=int(student[8]))
-                    return student1
+                    elif student[6] == "International Business And Trade":
+                        student1 = InternationalBusinessAndTradeStudent(
+                            student_email=student[0],
+                            student_name=student[1],
+                            gender=student[2],
+                            date_of_birth=student[3],
+                            address=student[4],
+                            phone_number=student[5],
+                            date_of_enrollment=student[7],
+                            year=int(student[8]))
+                        return student1
 
-                elif student[6] == "Global Challenges":
-                    student1 = GlobalChallengesStudent(
-                        student_email=student[0],
-                        student_name=student[1],
-                        gender=student[2],
-                        date_of_birth=student[3],
-                        address=student[4],
-                        phone_number=student[5],
-                        date_of_enrollment=student[7],
-                        year=int(student[8]),
-                        mission=student[10])
-                    return student1
+                    elif student[6] == "Global Challenges":
+                        student1 = GlobalChallengesStudent(
+                            student_email=student[0],
+                            student_name=student[1],
+                            gender=student[2],
+                            date_of_birth=student[3],
+                            address=student[4],
+                            phone_number=student[5],
+                            date_of_enrollment=student[7],
+                            year=int(student[8]),
+                            mission=student[10])
+                        return student1
 
-                elif student[6] == "Entrepreneurship":
-                    student1 = EntrepreneurshipStudent(
-                        student_email=student[0],
-                        student_name=student[1],
-                        gender=student[2],
-                        date_of_birth=student[3],
-                        address=student[4],
-                        phone_number=student[5],
-                        date_of_enrollment=student[7],
-                        year=int(student[8]))
-                    return student1
-        else:
-            return "Couldn't find the student with email provided! Check the email and try again.\n"
+                    elif student[6] == "Entrepreneurship":
+                        student1 = EntrepreneurshipStudent(
+                            student_email=student[0],
+                            student_name=student[1],
+                            gender=student[2],
+                            date_of_birth=student[3],
+                            address=student[4],
+                            phone_number=student[5],
+                            date_of_enrollment=student[7],
+                            year=int(student[8]))
+                        return student1
+
+            else:
+                return "Couldn't find the student with email provided! Check the email and try again.\n"
+
+    except OSError as e:
+        print("File not found", e)
+        sys.exit()
 
 
 def main():
@@ -110,53 +116,68 @@ def main():
                   "4. Entrepreneurship\n")
             student_major = input("Enter choice: ")
             if student_major == '1':
-                ComputerScienceStudent(
-                    student_email=input("Enter student's email: "),
-                    student_name=input("Enter student's name: "),
-                    gender=input("Enter student's gender: "),
-                    date_of_birth=input("Enter student's date of birth (YYYY-MM-DD) and use digit: "),
-                    address=input("Enter student's address: "),
-                    phone_number=input("Enter student's phone number: "),
-                    date_of_enrollment=input("Enter student's date of enrollment (YYYY-MM-DD) "
-                                             "separated by space and use digit: "),
-                    year=input("Enter student's year of study: "),
-                    github_username=input("Enter student's Github username: "))
+                try:
+                    ComputerScienceStudent(
+                        student_email=input("Enter student's email: "),
+                        student_name=input("Enter student's name: "),
+                        gender=input("Enter student's gender: "),
+                        date_of_birth=input("Enter student's date of birth (YYYY-MM-DD) and use digit: "),
+                        address=input("Enter student's address: "),
+                        phone_number=input("Enter student's phone number: "),
+                        date_of_enrollment=input("Enter student's date of enrollment (YYYY-MM-DD) "
+                                                 "separated by space and use digit: "),
+                        year=input("Enter student's year of study: "),
+                        github_username=input("Enter student's Github username: "))
+
+                except ValueError:
+                    print("The student year should be an integer.")
 
             elif student_major == '2':
-                InternationalBusinessAndTradeStudent(
-                    student_email=input("Enter student's email: "),
-                    student_name=input("Enter student's name: "),
-                    gender=input("Enter student's gender: "),
-                    date_of_birth=input("Enter student's date of birth (YYYY-MM-DD): "),
-                    address=input("Enter student's address: "),
-                    phone_number=input("Enter student's phone number: "),
-                    date_of_enrollment=input("Enter student's date of enrollment (YYYY-MM-DD) "
-                                             "separated by space and use digit: "),
-                    year=input("Enter student's year of study: "))
+                try:
+                    InternationalBusinessAndTradeStudent(
+                        student_email=input("Enter student's email: "),
+                        student_name=input("Enter student's name: "),
+                        gender=input("Enter student's gender: "),
+                        date_of_birth=input("Enter student's date of birth (YYYY-MM-DD): "),
+                        address=input("Enter student's address: "),
+                        phone_number=input("Enter student's phone number: "),
+                        date_of_enrollment=input("Enter student's date of enrollment (YYYY-MM-DD) "
+                                                 "separated by space and use digit: "),
+                        year=input("Enter student's year of study: "))
+
+                except ValueError:
+                    print("The student year should be an integer.")
 
             elif student_major == '3':
-                GlobalChallengesStudent(
-                    student_email=input("Enter student's email: "),
-                    student_name=input("Enter student's name: "),
-                    gender=input("Enter student's gender: "),
-                    date_of_birth=input("Enter student's date of birth: "),
-                    address=input("Enter student's address: "),
-                    phone_number=input("Enter student's phone number: "),
-                    date_of_enrollment=input("Enter student's date of enrollment (YYYY-MM-DD) "
-                                             "separated by space and use digit: "),
-                    year=input("Enter student's year of study: "),
-                    mission=input("Enter student's mission: "))
+                try:
+                    GlobalChallengesStudent(
+                        student_email=input("Enter student's email: "),
+                        student_name=input("Enter student's name: "),
+                        gender=input("Enter student's gender: "),
+                        date_of_birth=input("Enter student's date of birth: "),
+                        address=input("Enter student's address: "),
+                        phone_number=input("Enter student's phone number: "),
+                        date_of_enrollment=input("Enter student's date of enrollment (YYYY-MM-DD) "
+                                                 "separated by space and use digit: "),
+                        year=input("Enter student's year of study: "),
+                        mission=input("Enter student's mission: "))
+                except ValueError:
+                    print("The student year should be an integer.")
+
             elif student_major == '4':
-                EntrepreneurshipStudent(
-                    student_email=input("Enter student's email: "),
-                    student_name=input("Enter student's name: "),
-                    gender=input("Enter student's gender: "),
-                    date_of_birth=input("Enter student's date of birth (YYYY-MM-DD): "),
-                    address=input("Enter student's address: "),
-                    phone_number=input("Enter student's phone number: "),
-                    date_of_enrollment=input("Enter student's date of enrollment (YYYY-MM-DD) "
-                                             "separated by space and use digit: "),
-                    year=input("Enter student's year of study: "))
+                try:
+                    EntrepreneurshipStudent(
+                        student_email=input("Enter student's email: "),
+                        student_name=input("Enter student's name: "),
+                        gender=input("Enter student's gender: "),
+                        date_of_birth=input("Enter student's date of birth (YYYY-MM-DD): "),
+                        address=input("Enter student's address: "),
+                        phone_number=input("Enter student's phone number: "),
+                        date_of_enrollment=input("Enter student's date of enrollment (YYYY-MM-DD) "
+                                                 "separated by space and use digit: "),
+                        year=input("Enter student's year of study: "))
+                except ValueError:
+                    print("The student year should be an integer.")
 
         elif action == '2':
             print("\nStudent information")

@@ -2,20 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="54589a87-9868-406a-96d6-3c30527a4b44" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/csv-plugin.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/csv-plugin.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PG16_Question2/computer_science_student.py" beforeDir="false" afterPath="$PROJECT_DIR$/PG16_Question2/computer_science_student.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PG16_Question2/entrepreneurship_student_class.py" beforeDir="false" afterPath="$PROJECT_DIR$/PG16_Question2/entrepreneurship_student_class.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PG16_Question2/global_challenges_student.py" beforeDir="false" afterPath="$PROJECT_DIR$/PG16_Question2/global_challenges_student.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PG16_Question2/international_business_and_trade_student_class.py" beforeDir="false" afterPath="$PROJECT_DIR$/PG16_Question2/international_business_and_trade_student_class.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PG16_Question2/main_function.py" beforeDir="false" afterPath="$PROJECT_DIR$/PG16_Question2/main_function.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PG16_Question2/student.py" beforeDir="false" afterPath="$PROJECT_DIR$/PG16_Question2/student.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PG16_Question2/testComputerScienceStudent.py" beforeDir="false" afterPath="$PROJECT_DIR$/PG16_Question2/testComputerScienceStudent.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PG16_Question2/testEntrepreneurshipStudent.py" beforeDir="false" afterPath="$PROJECT_DIR$/PG16_Question2/testEntrepreneurshipStudent.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PG16_Question2/testGlobalChallenges.py" beforeDir="false" afterPath="$PROJECT_DIR$/PG16_Question2/testGlobalChallenges.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PG16_Question2/testInternationalBusinessAndTradeStudent.py" beforeDir="false" afterPath="$PROJECT_DIR$/PG16_Question2/testInternationalBusinessAndTradeStudent.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PG16_Question2/testStudenrt.py" beforeDir="false" afterPath="$PROJECT_DIR$/PG16_Question2/testStudenrt.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PG16_Question3/computer_science_student.py" beforeDir="false" afterPath="$PROJECT_DIR$/PG16_Question3/computer_science_student.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PG16_Question3/entrepreneurship_student_class.py" beforeDir="false" afterPath="$PROJECT_DIR$/PG16_Question3/entrepreneurship_student_class.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PG16_Question3/global_challenges_student.py" beforeDir="false" afterPath="$PROJECT_DIR$/PG16_Question3/global_challenges_student.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PG16_Question3/international_business_and_trade_student_class.py" beforeDir="false" afterPath="$PROJECT_DIR$/PG16_Question3/international_business_and_trade_student_class.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PG16_Question3/main_function.py" beforeDir="false" afterPath="$PROJECT_DIR$/PG16_Question3/main_function.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PG16_Question3/student.py" beforeDir="false" afterPath="$PROJECT_DIR$/PG16_Question3/student.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PG16_Question3/student_records.csv" beforeDir="false" afterPath="$PROJECT_DIR$/PG16_Question3/student_records.csv" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,7 +44,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../summativepg1 - Copy" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
-  <component name="RunManager" selected="Python.testStudenrt">
+  <component name="RunManager" selected="Python.main_function(2)">
     <configuration name="computer_science_student" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -215,6 +213,27 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="student" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/PG16_Question3" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/PG16_Question3/student.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="testComputerScienceStudent (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -249,27 +268,6 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/testComputerScienceStudent.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="testEntrepreneurshipStudent" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="C:\Users\Hp\AppData\Local\Programs\Python\Python310\python.exe" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/PG16_Question2" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/PG16_Question2/testEntrepreneurshipStudent.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -419,7 +417,6 @@
       <item itemvalue="Python.main_function(3)" />
       <item itemvalue="Python.testComputerScienceStudent" />
       <item itemvalue="Python.testComputerScienceStudent (1)" />
-      <item itemvalue="Python.testEntrepreneurshipStudent" />
       <item itemvalue="Python.testGlobalChallenges" />
       <item itemvalue="Python.testInternationalBusinessAndTradeStudent" />
       <item itemvalue="Python.testStudenrt" />
@@ -428,13 +425,14 @@
       <item itemvalue="Python tests.Python tests for testGlobalChallenges.MyTestCase" />
       <item itemvalue="Python tests.Python tests for testInternationalBusinessAndTradeStudent.MyTestCase" />
       <item itemvalue="Python tests.Python tests for testInternationalBusinessAndTradeStudent.MyTestCase.test_print_student_information" />
+      <item itemvalue="Python.student" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.student" />
         <item itemvalue="Python.testStudenrt" />
         <item itemvalue="Python.testInternationalBusinessAndTradeStudent" />
         <item itemvalue="Python.testGlobalChallenges" />
-        <item itemvalue="Python.testEntrepreneurshipStudent" />
         <item itemvalue="Python.testComputerScienceStudent (1)" />
       </list>
     </recent_temporary>

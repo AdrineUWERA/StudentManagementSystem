@@ -1,5 +1,4 @@
-from student import Student     # imports Student class from student file
-import datetime     # imports datetime modules
+from student import *     # imports Student class from student file
 
 
 class ComputerScienceStudent(Student):      # class named ComputerScienceStudent that inherits Student class

@@ -1,5 +1,6 @@
 import datetime
 import csv
+import sys
 
 
 class Student:
@@ -14,7 +15,7 @@ class Student:
         self.major = ""
         try:
             date_of_enrollment = list(map(int, date_of_enrollment.strip().split("-")))
-            self.date_of_enrollment = datetime.datetime(date_of_enrollment[0], date_of_enrollment[1],
+            self.date_of_enrollment = datetime.date(date_of_enrollment[0], date_of_enrollment[1],
                                                         date_of_enrollment[2])
         except IndexError as e:
             print("Separate year, month, date with a hyphen(-). Use YYYY-MM-DD format.", e)

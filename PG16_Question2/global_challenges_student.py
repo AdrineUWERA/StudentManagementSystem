@@ -1,5 +1,4 @@
-from student import Student
-import datetime
+from student import *
 
 
 class GlobalChallengesStudent(Student):
