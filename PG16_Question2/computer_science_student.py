@@ -38,7 +38,7 @@ class ComputerScienceStudent(Student):
 
     # a method for changing student status
     def change_student_status(self):
-        if datetime.datetime.now() >= self.expected_graduation_date:    # checks if student is done with the studies
+        if datetime.date.today() >= self.expected_graduation_date:    # checks if student is done with the studies
             self.status = "Alumni"  # updates student status to Alumni
             return "Student done is done with the degree program"   # displays to indicate that the student is officially done with the studies
 

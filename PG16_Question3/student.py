@@ -16,7 +16,7 @@ class Student:
         try:
             date_of_enrollment = list(map(int, date_of_enrollment.strip().split("-")))
             self.date_of_enrollment = datetime.date(date_of_enrollment[0], date_of_enrollment[1],
-                                                        date_of_enrollment[2])
+                                                    date_of_enrollment[2])
         except IndexError as e:
             print("Separate year, month, date with a hyphen(-). Use YYYY-MM-DD format.", e)
             sys.exit()
@@ -28,19 +28,19 @@ class Student:
         self.internship = []
 
     def print_student_information(self):
-        
-        return f"Student information: \n"\
-               f"Student email: {self.student_email}\n"\
-               f"Student name: {self.student_name}\n"\
-               f"Gender: {self.gender}\n"\
-               f"Date of birth: {self.date_of_birth}\n"\
-               f"Address: {self.address}\n"\
-               f"Phone number: {self.phone_number}\n"\
-               f"Major: {self.major}\n"\
-               f"Date of enrollment: {self.date_of_enrollment}\n"\
-               f"Year:{ self.year}\n"\
-               f"Status: {self.status}\n"\
-               f"Internships:{ self.internship}"
+
+        return f"Student information: \n" \
+               f"Student email: {self.student_email}\n" \
+               f"Student name: {self.student_name}\n" \
+               f"Gender: {self.gender}\n" \
+               f"Date of birth: {self.date_of_birth}\n" \
+               f"Address: {self.address}\n" \
+               f"Phone number: {self.phone_number}\n" \
+               f"Major: {self.major}\n" \
+               f"Date of enrollment: {self.date_of_enrollment}\n" \
+               f"Year:{self.year}\n" \
+               f"Status: {self.status}\n" \
+               f"Internships:{self.internship}"
 
     def promote_student(self):
         self.year += 1
@@ -73,9 +73,9 @@ class Student:
                          "date_of_enrollment": student[7],
                          "year": student[8], "status": student[9], "github_username/venture/mission": student[10],
                          "expected_graduation_date": student[11], "internship": student[12]})
-                    
+
             return f"Phone number updated successfully to {self.phone_number}"
-        
+
         elif choice == '2':
             with open("student_records.csv", 'r') as student_records:
                 read_student = csv.reader(student_records)

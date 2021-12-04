@@ -126,7 +126,7 @@ def main():
                         phone_number=input("Enter student's phone number: "),
                         date_of_enrollment=input("Enter student's date of enrollment (YYYY-MM-DD) "
                                                  "separated by space and use digit: "),
-                        year=input("Enter student's year of study: "),
+                        year=input("Enter student's year of study in digit: "),
                         github_username=input("Enter student's Github username: "))
 
                 except ValueError:
@@ -143,7 +143,7 @@ def main():
                         phone_number=input("Enter student's phone number: "),
                         date_of_enrollment=input("Enter student's date of enrollment (YYYY-MM-DD) "
                                                  "separated by space and use digit: "),
-                        year=input("Enter student's year of study: "))
+                        year=input("Enter student's year of study in digit: "))
 
                 except ValueError:
                     print("The student year should be an integer.")
@@ -159,7 +159,7 @@ def main():
                         phone_number=input("Enter student's phone number: "),
                         date_of_enrollment=input("Enter student's date of enrollment (YYYY-MM-DD) "
                                                  "separated by space and use digit: "),
-                        year=input("Enter student's year of study: "),
+                        year=input("Enter student's year of study in digit: "),
                         mission=input("Enter student's mission: "))
                 except ValueError:
                     print("The student year should be an integer.")
@@ -175,7 +175,7 @@ def main():
                         phone_number=input("Enter student's phone number: "),
                         date_of_enrollment=input("Enter student's date of enrollment (YYYY-MM-DD) "
                                                  "separated by space and use digit: "),
-                        year=input("Enter student's year of study: "))
+                        year=input("Enter student's year of study in digit: "))
                 except ValueError:
                     print("The student year should be an integer.")
 
@@ -263,7 +263,7 @@ def main():
         if action == '1':
             print("\nUpdate student information")
             print("--------------------------")
-            email = input("Enter student email: ")
+            email = input("Enter your email: ")
             student2 = retrieve_student(email)
             if student2 == "Couldn't find the student with email provided! Check the email and try again.\n":
                 print(student2)
@@ -273,7 +273,7 @@ def main():
         elif action == '2':
             print("\nView degree program outline")
             print("---------------------------")
-            email = input("Enter student email: ")
+            email = input("Enter your email: ")
             student2 = retrieve_student(email)
             if student2 == "Couldn't find the student with email provided! Check the email and try again.\n":
                 print(student2)
@@ -283,7 +283,7 @@ def main():
         elif action == '3':
             print("\nAdd internship")
             print("----------------")
-            email = input("Enter student email: ")
+            email = input("Enter your email: ")
             student2 = retrieve_student(email)
             if student2 == "Couldn't find the student with email provided! Check the email and try again.\n":
                 print(student2)
@@ -293,7 +293,7 @@ def main():
         elif action == '4':
             print("\nAdd venture")
             print("-----------")
-            email = input("Enter student email: ")
+            email = input("Enter your email: ")
             student2 = retrieve_student(email)
             if student2 == "Couldn't find the student with email provided! Check the email and try again.\n":
                 print(student2)
