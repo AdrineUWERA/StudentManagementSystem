@@ -5,15 +5,11 @@
       <change beforePath="$PROJECT_DIR$/.idea/csv-plugin.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/csv-plugin.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PG16_Question2/computer_science_student.py" beforeDir="false" afterPath="$PROJECT_DIR$/PG16_Question2/computer_science_student.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PG16_Question2/entrepreneurship_student_class.py" beforeDir="false" afterPath="$PROJECT_DIR$/PG16_Question2/entrepreneurship_student_class.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PG16_Question2/global_challenges_student.py" beforeDir="false" afterPath="$PROJECT_DIR$/PG16_Question2/global_challenges_student.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PG16_Question2/international_business_and_trade_student_class.py" beforeDir="false" afterPath="$PROJECT_DIR$/PG16_Question2/international_business_and_trade_student_class.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PG16_Question2/main_function.py" beforeDir="false" afterPath="$PROJECT_DIR$/PG16_Question2/main_function.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PG16_Question2/student.py" beforeDir="false" afterPath="$PROJECT_DIR$/PG16_Question2/student.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PG16_Question3/computer_science_student.py" beforeDir="false" afterPath="$PROJECT_DIR$/PG16_Question3/computer_science_student.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PG16_Question3/entrepreneurship_student_class.py" beforeDir="false" afterPath="$PROJECT_DIR$/PG16_Question3/entrepreneurship_student_class.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PG16_Question3/global_challenges_student.py" beforeDir="false" afterPath="$PROJECT_DIR$/PG16_Question3/global_challenges_student.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PG16_Question3/international_business_and_trade_student_class.py" beforeDir="false" afterPath="$PROJECT_DIR$/PG16_Question3/international_business_and_trade_student_class.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PG16_Question3/main_function.py" beforeDir="false" afterPath="$PROJECT_DIR$/PG16_Question3/main_function.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PG16_Question3/student.py" beforeDir="false" afterPath="$PROJECT_DIR$/PG16_Question3/student.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PG16_Question3/student_records.csv" beforeDir="false" afterPath="$PROJECT_DIR$/PG16_Question3/student_records.csv" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -420,12 +416,12 @@
       <item itemvalue="Python.testGlobalChallenges" />
       <item itemvalue="Python.testInternationalBusinessAndTradeStudent" />
       <item itemvalue="Python.testStudenrt" />
+      <item itemvalue="Python.student" />
       <item itemvalue="Python tests.Python tests for testComputerScienceStudent.TestComputerScienceStudent" />
       <item itemvalue="Python tests.Python tests for testComputerScienceStudent.TestComputerScienceStudent.test_print_student_information" />
       <item itemvalue="Python tests.Python tests for testGlobalChallenges.MyTestCase" />
       <item itemvalue="Python tests.Python tests for testInternationalBusinessAndTradeStudent.MyTestCase" />
       <item itemvalue="Python tests.Python tests for testInternationalBusinessAndTradeStudent.MyTestCase.test_print_student_information" />
-      <item itemvalue="Python.student" />
     </list>
     <recent_temporary>
       <list>

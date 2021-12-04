@@ -1,5 +1,5 @@
-from computer_science_student import ComputerScienceStudent
-from global_challenges_student import GlobalChallengesStudent
+from computer_science_student import ComputerScienceStudent     # imports ComputerScienceStudent class from computer_science_student file
+from global_challenges_student import GlobalChallengesStudent   # imports GlobalChallengesStudent class from global_challenges_student file
 from international_business_and_trade_student_class import InternationalBusinessAndTradeStudent
 from entrepreneurship_student_class import EntrepreneurshipStudent
 from student import student_records
