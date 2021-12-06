@@ -64,11 +64,11 @@ class Student:
         if choice == '1':  # when user chooses 1 for updating phone number
             new_phone_number = input("Enter student's new phone number: ")  # takes user input for new phone number
             self.phone_number = new_phone_number  # updates the student's recorded phone number to the new phone number
-            return f"Phone number updated successfully to {self.phone_number}"  # displays to indicate that the phone number was updated
+            return f"Phone number updated successfully to {self.phone_number}."  # displays to indicate that the phone number was updated
         elif choice == '2':  # when user chooses 2 updating address
             new_address = input("Enter student's new address: ")  # takes user input for new address 
             self.address = new_address  # updates the student's recorded address to a new address
-            return f"Address updated successfully to {self.address}"  # displays to indicate that the address was updated
+            return f"Address updated successfully to {self.address}."  # displays to indicate that the address was updated
         else:
             return "Invalid input!"  # displays when user enters input that is not 1 or 2
 
@@ -81,4 +81,4 @@ class Student:
                               "Position": input("Enter the position the student had in the internship: ")}
 
         self.internship.append(internship_details)  # appends student's internship details in the internship list
-        return "internship added successfully!"  # displays to indicate that the internship was recorded
+        return "Internship added successfully!"  # displays to indicate that the internship was recorded

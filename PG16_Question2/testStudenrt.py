@@ -1,4 +1,4 @@
-import unittest     # import unittest module
+import unittest  # import unittest module
 from student import Student
 
 
@@ -10,23 +10,28 @@ class MyTestCase(unittest.TestCase):
         self.student1 = Student("a.ana@alustudent.com", "Allie Ana", "F", "2003-02-01",
                                 "Kimironko", "+234788888888", "2020-11-26", 1)
 
+    # test the update_student_information()
     def test_update_student_information(self):
-        self.assertIn(self.student1.update_student_information(), f"Phone number updated successfully to "
-                                                                  f"{self.student1.phone_number}!")
-        self.assertIn(self.student1.update_student_information(), f"Address updated successfully to"
-                                                                  f" {self.student1.address}")
+        # compares the output of update_student_information() method to the expected output
+        self.assertEqual(self.student1.update_student_information(), f"Phone number updated successfully to "
+                                                                     f"{self.student1.phone_number}.")
+        # compares the output of update_student_information() method to the expected output
+        self.assertEqual(self.student1.update_student_information(), f"Address updated successfully to"
+                                                                     f" {self.student1.address}.")
 
     def test_promote_student(self):
+        # compares the output of promote_student() method to "Student is now in year 2"
         self.assertEqual(self.student1.promote_student(), "Student is now in year 2")
 
     def test_add_student_internship(self):
-        self.assertEqual(self.student1.add_student_internship(), "internship added successfully!")
+        # compares the output of add_student_internship() method to "Internship added successfully!"
+        self.assertEqual(self.student1.add_student_internship(), "Internship added successfully!")
 
     # a method to test print_student_information() method
     def test_print_student_information(self):
         # compares the output of print_student_information() method to the output below
         self.assertEqual(self.student1.print_student_information(),
-'''Student information: 
+                         '''Student information: 
 Student email: a.ana@alustudent.com
 Student name: Allie Ana
 Gender: F

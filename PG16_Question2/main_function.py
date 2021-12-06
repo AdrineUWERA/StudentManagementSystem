@@ -11,12 +11,13 @@ print("-----------------------------")
 
 # a function to rerun the program to allow user to perform different operations in a row
 def re_run():
-    while True:  # creates a loop to allow user to perform different operations in a row until he/she decides to exit
+    # creates a loop to allow user to perform different operations in a row until he/she decides to exit
+    while True:  # This loop will keep asking the user whether they want do any other operation until they enter 'Y' or 'N'
         operation2 = str(
             input("\nEnter 'Y' if you would like to do any other operation and 'N' if you do not want to: "))  # allows user to specify if he/she wants to do another operation
         if operation2.upper() in ('Y', 'N'):
-            break
-        print("\nInvalid input. Choose 'Y' or 'N'.\n")
+            break       # the loop will only break when the user enters 'Y' or 'N'
+        print("\nInvalid input. Choose 'Y' or 'N'.\n")   # whenever a user enter something that's
     if operation2.upper() == 'Y':   # when user enters yes, the main function will be called
         main()
     else:   # otherwise the program will be exited
