@@ -17,11 +17,11 @@ def re_run():
             input("\nEnter 'Y' if you would like to do any other operation and 'N' if you do not want to: "))  # allows user to specify if he/she wants to do another operation
         if operation2.upper() in ('Y', 'N'):
             break       # the loop will only break when the user enters 'Y' or 'N'
-        print("\nInvalid input. Choose 'Y' or 'N'.\n")   # whenever a user enter something that's
-    if operation2.upper() == 'Y':   # when user enters yes, the main function will be called
+        print("\nInvalid input. Choose 'Y' or 'N'.\n")  # Whenever a user enter something which is not 'Y' or 'N', this message will be printed
+    if operation2.upper() == 'Y':   # when user enters 'Y', the main function will be called
         main()
-    else:   # otherwise the program will be exited
-        sys.exit("Thank you!!")
+    else:
+        sys.exit("Thank you!!")   # If the user enter 'N', function sys.exit() will be called to end the program
 
 
 # a function for flow control among operations
@@ -29,11 +29,11 @@ def main():
     print("\nUser categories:\n"
           "1. Registrar Office\n"
           "2. Student\n")       # displays a menu to choose from
-    while True:
+    while True:  # This loop will keep asking the user their category until they enter either '1' or '2'
         user = input("Enter choice: ")
         if user in ('1', '2'):
-            break
-        print("\nInvalid input. Choose '1' or '2'.\n")
+            break    # The loop will only break if the user enter either '1' or '2'
+        print("\nInvalid input. Choose '1' or '2'.\n") # Whenever a user enter something which is not '1' or '2', this message will be printed
     if user == '1':     # when user is from the registrar office
         print("\nChoose \n"
               "1. Register student\n"
