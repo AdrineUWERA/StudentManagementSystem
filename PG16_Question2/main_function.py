@@ -174,15 +174,22 @@ def main():
         elif action == '6':  # when user from registrar office choose to view degree program of a certain course
             print("\nView degree program outline")
             print("---------------------------")
-            email = input("Enter student email: ")  # takes user input of student's email for whom to view degree program outline
-            for student in student_records:     # loops through the student_records array
-                if student.student_email == email:  # checks if the email provided matches any in the student records
-                    student.view_degree_program_outline()   # calls the view_degree_program_outline() method
-                    break
-
-            else:
-                # displayed when the email provided doesn't match any email in the student records
-                print("Couldn't find the student with email provided! Check the email and try again.\n")
+            print("Choose degree program you want to view outline for:\n"
+                  "1. Computer science\n"
+                  "2. International Business and Trade\n"
+                  "3. Global challenges\n"
+                  "4. Entrepreneurship\n")  # displays menu to choose from the degree program they want to view outline for
+            degree_program = input("Enter choice 1,2,3, or 4: ")
+            if degree_program == "1":  # If they choose to view for computer science degree program
+                ComputerScienceStudent.view_degree_program_outline()
+            elif degree_program == "2":  # If they choose to view for International Business And Trade degree program
+                InternationalBusinessAndTradeStudent.view_degree_program_outline()
+            elif degree_program == "3":  # If they choose to view for global challenges degree program
+                GlobalChallengesStudent.view_degree_program_outline()
+            elif degree_program == "4":  # If they choose to view for Entrepreneurship degree program
+                EntrepreneurshipStudent.view_degree_program_outline()
+            else:  # If the user enters choice which is not in 1,2,3, or 4
+                print("Invalid input!!")
 
         elif action == '7':  # when user from registrar office choose to add student's internship. can be in case a student had issues with the system.
             print("\nAdd student internship")
